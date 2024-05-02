@@ -7,19 +7,19 @@ import {selectContacts} from '../../redux/contactsSlice';
 import { selectNameFilter } from '../../redux/filtersSlice';
 
 export default function App() {
-  const contacts = useSelector(selectContacts);
-  const filter = useSelector(selectNameFilter);
+  // const contacts = useSelector(selectContacts);
+  // const filter = useSelector(selectNameFilter);
 
-  const visibleContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
+  // const visibleContacts = contacts.filter(contact =>
+  //   contact.name.toLowerCase().includes(filter.toLowerCase())
+  // );
 
   return (
     <div>
       <h1 className={css.header}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      <ContactList contacts={visibleContacts} />
+      <ContactList />
     </div>
   );
 }
